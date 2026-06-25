@@ -1,0 +1,38 @@
+<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site.master.vb" Inherits="PanaderiaMaldonadoVB.SiteMaster" %>
+<!DOCTYPE html>
+<html lang="es">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /> - Panadería Maldonado</title>
+    <link href="Content/site.css" rel="stylesheet" />
+</head>
+<body>
+<form id="form1" runat="server">
+    <header class="topbar">
+        <a class="brand" href="Default.aspx">☕ Panadería Maldonado</a>
+        <nav>
+            <a href="Default.aspx">Inicio</a>
+            <a href="Tienda.aspx">Tienda</a>
+            <a href="Carrito.aspx">Carrito <span id="cartCount">0</span></a>
+            <a href="Checkout.aspx">Checkout</a>
+        </nav>
+    </header>
+    <main>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    </main>
+    <footer>
+        <section>
+            <h3>Contacto</h3>
+            <p>Av. Aiguá 1234, Maldonado<br />099 123 456<br />pedidos@panaderiamaldonado.demo</p>
+        </section>
+        <section>
+            <h3>Horarios</h3>
+            <p>Lunes a sábado<br />07:00 - 20:00</p>
+        </section>
+        <p class="copy">Copyright © 2026 Panadería Maldonado</p>
+    </footer>
+</form>
+<script src="Scripts/cart.js"></script>
+</body>
+</html>
