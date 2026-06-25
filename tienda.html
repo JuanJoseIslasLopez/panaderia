@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tienda - Panadería Maldonado</title>
+  <link href="Content/site.css" rel="stylesheet" />
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html"><img src="Images/logo-panaderia-maldonado.svg" alt="Panadería Maldonado" class="logo" /> Panadería Maldonado</a>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="tienda.html">Tienda</a>
+    <a href="carrito.html">Carrito <span id="cartCount">0</span></a>
+    <a href="checkout.html">Checkout</a>
+  </nav>
+</header>
+<main>
+<h1>Tienda</h1>
+<p class="muted">Catálogo demo estilo WordPress/WooCommerce para Panadería Maldonado.</p>
+<div class="filters">
+  <select id="categoryFilter" class="input" onchange="filterProducts()">
+    <option value="">Todas las categorías</option>
+    <option>Panificados</option><option>Bizcochos</option><option>Dulces</option><option>Tortas</option><option>Salados</option><option>Combos</option>
+  </select>
+</div>
+<section class="products-grid">
+<article class="product" data-category="Panificados">
+  <div class="img"><img src="Images/pan-flauta.svg" alt="Pan flauta artesanal" /></div>
+  <small>Panificados</small>
+  <h2>Pan flauta artesanal</h2>
+  <p class="price">$ 58.00</p>
+  <button type="button" class="btn small" onclick="addToCart('1', 'Pan flauta artesanal', 58)">Agregar al carrito</button>
+</article>
+<article class="product" data-category="Bizcochos">
+  <div class="img"><img src="Images/bizcochos.svg" alt="Bizcochos surtidos 1/2 kg" /></div>
+  <small>Bizcochos</small>
+  <h2>Bizcochos surtidos 1/2 kg</h2>
+  <p class="price">$ 260.00</p>
+  <button type="button" class="btn small" onclick="addToCart('2', 'Bizcochos surtidos 1/2 kg', 260)">Agregar al carrito</button>
+</article>
+<article class="product" data-category="Panificados">
+  <div class="img"><img src="Images/pan-campo.svg" alt="Pan de campo" /></div>
+  <small>Panificados</small>
+  <h2>Pan de campo</h2>
+  <p class="price">$ 145.00</p>
+  <button type="button" class="btn small" onclick="addToCart('3', 'Pan de campo', 145)">Agregar al carrito</button>
+</article>
+<article class="product" data-category="Bizcochos">
+  <div class="img"><img src="Images/medialunas.svg" alt="Medialunas dulces x6" /></div>
+  <small>Bizcochos</small>
+  <h2>Medialunas dulces x6</h2>
+  <p class="price">$ 210.00</p>
+  <button type="button" class="btn small" onclick="addToCart('4', 'Medialunas dulces x6', 210)">Agregar al carrito</button>
+</article>
+<article class="product" data-category="Dulces">
+  <div class="img"><img src="Images/alfajor.svg" alt="Alfajor de maicena grande" /></div>
+  <small>Dulces</small>
+  <h2>Alfajor de maicena grande</h2>
+  <p class="price">$ 85.00</p>
+  <button type="button" class="btn small" onclick="addToCart('5', 'Alfajor de maicena grande', 85)">Agregar al carrito</button>
+</article>
+<article class="product" data-category="Tortas">
+  <div class="img"><img src="Images/torta-chocolate.svg" alt="Torta de chocolate" /></div>
+  <small>Tortas</small>
+  <h2>Torta de chocolate</h2>
+  <p class="price">$ 690.00</p>
+  <button type="button" class="btn small" onclick="addToCart('6', 'Torta de chocolate', 690)">Agregar al carrito</button>
+</article>
+<article class="product" data-category="Salados">
+  <div class="img"><img src="Images/tarta-salada.svg" alt="Tarta salada de jamón y queso" /></div>
+  <small>Salados</small>
+  <h2>Tarta salada de jamón y queso</h2>
+  <p class="price">$ 240.00</p>
+  <button type="button" class="btn small" onclick="addToCart('7', 'Tarta salada de jamón y queso', 240)">Agregar al carrito</button>
+</article>
+<article class="product" data-category="Salados">
+  <div class="img"><img src="Images/empanadas.svg" alt="Empanadas al horno x6" /></div>
+  <small>Salados</small>
+  <h2>Empanadas al horno x6</h2>
+  <p class="price">$ 390.00</p>
+  <button type="button" class="btn small" onclick="addToCart('8', 'Empanadas al horno x6', 390)">Agregar al carrito</button>
+</article>
+<article class="product" data-category="Panificados">
+  <div class="img"><img src="Images/pan-integral.svg" alt="Pan integral con semillas" /></div>
+  <small>Panificados</small>
+  <h2>Pan integral con semillas</h2>
+  <p class="price">$ 175.00</p>
+  <button type="button" class="btn small" onclick="addToCart('9', 'Pan integral con semillas', 175)">Agregar al carrito</button>
+</article>
+<article class="product" data-category="Dulces">
+  <div class="img"><img src="Images/masas-finas.svg" alt="Masas finas surtidas 1/2 kg" /></div>
+  <small>Dulces</small>
+  <h2>Masas finas surtidas 1/2 kg</h2>
+  <p class="price">$ 520.00</p>
+  <button type="button" class="btn small" onclick="addToCart('10', 'Masas finas surtidas 1/2 kg', 520)">Agregar al carrito</button>
+</article>
+<article class="product" data-category="Panificados">
+  <div class="img"><img src="Images/rosca.svg" alt="Rosca de chicharrón" /></div>
+  <small>Panificados</small>
+  <h2>Rosca de chicharrón</h2>
+  <p class="price">$ 230.00</p>
+  <button type="button" class="btn small" onclick="addToCart('11', 'Rosca de chicharrón', 230)">Agregar al carrito</button>
+</article>
+<article class="product" data-category="Combos">
+  <div class="img"><img src="Images/combo-desayuno.svg" alt="Combo desayuno familiar" /></div>
+  <small>Combos</small>
+  <h2>Combo desayuno familiar</h2>
+  <p class="price">$ 760.00</p>
+  <button type="button" class="btn small" onclick="addToCart('12', 'Combo desayuno familiar', 760)">Agregar al carrito</button>
+</article>
+</section>
+</main>
+<footer>
+  <section>
+    <h3>Contacto</h3>
+    <p>Av. Aiguá 1234, Maldonado<br />099 123 456<br />pedidos@panaderiamaldonado.demo</p>
+  </section>
+  <section>
+    <h3>Horarios</h3>
+    <p>Lunes a sábado<br />07:00 - 20:00</p>
+  </section>
+  <p class="copy">Copyright © 2026 Panadería Maldonado</p>
+</footer>
+<script src="Scripts/cart.js"></script>
+</body>
+</html>

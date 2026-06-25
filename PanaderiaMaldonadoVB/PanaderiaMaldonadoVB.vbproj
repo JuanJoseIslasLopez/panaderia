@@ -1,7 +1,0 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
-  <PropertyGroup>
-    <TargetFramework>net48</TargetFramework>
-    <RootNamespace>PanaderiaMaldonadoVB</RootNamespace>
-    <LangVersion>latest</LangVersion>
-  </PropertyGroup>
-</Project>
